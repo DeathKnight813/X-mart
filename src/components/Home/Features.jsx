@@ -9,7 +9,7 @@ import { Link } from 'react-router-dom';
 const Features = () => {
     const commonAnimationProperties = {
         viewport: { once: true, amount: 'some' },
-        transition: { type: 'spring', stiffness: 200, delay: 0.3 },
+        transition: { type: 'spring', stiffness: 200, delay: 0.45 },
     };
 
     return (
