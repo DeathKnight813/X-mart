@@ -1,0 +1,60 @@
+.loading_bar_container {
+    position: relative;
+
+    display: flex;
+    justify-content: center;
+    gap: 0 1rem;
+    margin-top: 10rem;
+}
+
+.bar {
+    width: 3rem;
+    background-color: var(--clr-accent-500);
+}
+
+.bar_1 {
+    animation: animate_first_bar 400ms infinite alternate;
+}
+
+.bar_2 {
+    animation: animate_second_bar 400ms 100ms infinite alternate;
+}
+
+.bar_3 {
+    animation: animate_third_bar 400ms 200ms infinite alternate;
+}
+
+@keyframes animate_first_bar {
+    from {
+        height: 0rem;
+        margin-top: 0px;
+    }
+
+    to {
+        margin-top: -4rem;
+        height: 4rem;
+    }
+}
+
+@keyframes animate_second_bar {
+    from {
+        height: 0rem;
+        margin-top: 0px;
+    }
+
+    to {
+        margin-top: -6rem;
+        height: 6rem;
+    }
+}
+
+@keyframes animate_third_bar {
+    from {
+        height: 0rem;
+    }
+
+    to {
+        margin-top: -8rem;
+        height: 8rem;
+    }
+}

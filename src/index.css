@@ -1,0 +1,169 @@
+@import url('https://fonts.googleapis.com/css2?family=Aclonica&family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,500;1,700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+:root {
+
+    --ff-primary: 'Poppins', sans-serif;
+    --ff-secondary: 'Aclonica', sans-serif;
+
+    --primary-background-900: rgb(23 23 23);
+
+    --secondary-background-300: rgb(96, 165, 250);
+    --secondary-background-500: rgb(33, 144, 255);
+
+    --clr-accent-500: rgb(227, 114, 255);
+    --clr-accent-600: rgb(181, 115, 248);
+
+    --font-color-300: rgb(208, 223, 255);
+
+    --max-width: min(90%, 80rem);
+
+    --z-index-100: 1;
+    --z-index-200: 5;
+    --z-index-300: 10;
+    --z-index-400: 25;
+    --z-index-500: 50;
+    --z-index-600: 100;
+    --z-index-700: 250;
+    --z-index-800: 500;
+    --z-index-900: 1000;
+
+    --letter-spacing-smallest: 0.5px;
+    --letter-spacing-small: 1px;
+    --letter-spacing-medium: 1.7px;
+    --letter-spacing-large: 3px;
+    --letter-spacing-larger: 4px;
+
+    --black-gradient: linear-gradient(144.39deg,
+            #ffffff -278.56%,
+            #6d6d6d -78.47%,
+            #11101d 91.61%);
+    --bg-blue-gradient: linear-gradient(109.6deg, var(--clr-accent-600) 11.2%, rgba(110, 123, 251, 1) 91.1%);
+
+    --transition-1: 400ms ease-in-out;
+    --border-rad-1: 10px;
+
+    --navbar-cover-margin-top: 7rem;
+}
+
+* {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--primary-background-900);
+    font-family: var(--ff-primary);
+    color: white;
+
+    overflow-x: hidden;
+}
+
+img,
+picture,
+svg {
+    max-width: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+.btn {
+    background: none;
+    cursor: pointer;
+}
+
+.main {
+    z-index: var(--z-index-100);
+}
+
+.section_wrapper {
+    width: var(--max-width);
+    margin: auto;
+}
+
+.clipped_polygon_section {
+    clip-path: polygon(0 0, 100% 10vw, 100% 100%, 0 100%);
+}
+
+.intro_title {
+    font-size: clamp(2.5rem, 4vw, 3.8rem);
+    font-weight: 600;
+    font-family: var(--ff-secondary);
+
+    text-align: center;
+    text-transform: capitalize;
+
+    color: var(--font-color-300);
+}
+
+.page_intro_background {
+    font-family: var(--ff-secondary);
+    color: var(--font-color-300);
+
+    height: 50vh;
+    padding-bottom: min(12vw, 4rem);
+
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+
+    text-align: center;
+
+    font-size: max(3rem, 6vw);
+    line-height: 1;
+
+    background-image: linear-gradient(180deg,
+            hsl(0deg 0% 7%) 0%,
+            hsl(0deg 0% 31%) 20%,
+            hsl(0deg 0% 38%) 40%,
+            hsl(0deg 0% 40%) 60%,
+            hsl(216deg 15% 49%) 90%,
+            hsla(213, 89%, 78%, 0.628) 100%);
+}
+
+.gradient_border {
+    background: var(--black-gradient) padding-box,
+        linear-gradient(to right, var(--secondary-background-300), rgb(181, 115, 248)) border-box;
+    border: 3px solid transparent;
+}
+
+.text_gradient {
+    background: #B573F8;
+    background: -webkit-radial-gradient(circle farthest-side at bottom right, #B573F8 17%, #2190FF 100%);
+    background: -moz-radial-gradient(circle farthest-side at bottom right, #B573F8 17%, #2190FF 100%);
+    background: radial-gradient(circle farthest-side at bottom right, #B573F8 17%, #2190FF 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.bg-blue-gradient {
+    background-image: var(--bg-blue-gradient);
+}
+
+.white_hover_underline {
+    position: relative;
+}
+
+.white_hover_underline::before {
+    content: '';
+    position: absolute;
+    top: 120%;
+    left: 50%;
+
+    width: 120%;
+    height: 2px;
+
+    background-color: var(--font-color-300);
+
+    transform: translateX(-50%) scale(0);
+
+    transition: transform 300ms ease-in-out;
+}
+
+.white_hover_underline:hover::before {
+    transform: translateX(-50%) scale(1);
+}

@@ -1,0 +1,135 @@
+.sell_container {
+    position: relative;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+
+    padding: 1em 3em;
+}
+
+.sell_container::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: -40%;
+
+    width: 50%;
+    height: 50%;
+
+    border-radius: 100vh;
+
+    background: linear-gradient(180deg, var(--font-color-300) 0%, var(--secondary-background-500) 100%);
+    filter: blur(200px);
+
+    z-index: -1;
+
+    transform: translateY(-50%);
+}
+
+.sell_content_container {
+    width: 50%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+
+    padding: 1.5em;
+}
+
+.sell_title {
+    margin-bottom: max(2vw, 1rem);
+    text-align: start !important;
+
+    font-size: clamp(2.5rem, 4vw, 3.8rem);
+    line-height: 1.2;
+}
+
+.sell_description {
+    line-height: 1.4;
+    font-size: clamp(1.5rem, 1.5vw, 2.5rem);
+    margin-bottom: max(.5rem, 1vw);
+}
+
+.sell_extra_info {
+    font-size: clamp(.8rem, 1.2vw, 1.5rem);
+}
+
+.sell_btn {
+    position: relative;
+
+    margin-top: max(4vw, 2.5rem);
+    outline: 2px solid var(--secondary-background-300);
+
+    font-size: 1.3rem;
+}
+
+.sell_btn::after {
+    content: '';
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 0;
+    height: 100%;
+
+    border-radius: 100vh;
+    z-index: -1;
+
+    transition: width 500ms ease-in-out;
+}
+
+.sell_btn:hover::after {
+    width: 100%;
+    background-color: var(--secondary-background-300);
+}
+
+.sell_right_container {
+    width: min(50%, 60rem);
+    height: min(50vw, 40rem);
+
+    border-radius: 25% 0;
+
+    overflow: hidden;
+}
+
+.parallax_img_container img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+@media (max-width: 700px) {
+    .sell_container {
+        flex-direction: column;
+        align-items: center;
+
+        padding: 0 1em;
+    }
+
+    .sell_content_container {
+        width: 100%;
+        text-align: center;
+        align-items: center;
+    }
+
+    .sell_title {
+        text-align: center !important;
+    }
+
+    .sell_right_container {
+        width: 100%;
+        height: 600px;
+
+        border-radius: 25% 0;
+    }
+
+    .parallax_img_container {
+        height: 100%;
+        overflow: hidden;
+        border-radius: 25% 0;
+    }
+}
