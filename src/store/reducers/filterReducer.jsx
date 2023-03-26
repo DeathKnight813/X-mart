@@ -78,7 +78,7 @@ const filterReducer = (state, action) => {
 
         tempFilteredProductsList = tempFilteredProductsList.filter(
             productData =>
-                productData.name.startsWith(state.filters['searchTerm']) || state.filters['searchTerm'] === ''
+                productData.name.includes(state.filters['searchTerm']) || state.filters['searchTerm'] === ''
         );
 
         tempFilteredProductsList = tempFilteredProductsList.filter(
