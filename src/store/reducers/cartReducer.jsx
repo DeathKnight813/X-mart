@@ -35,14 +35,16 @@ const cartReducer = (state, action) => {
             shipping && (tempShippingFee += SHIPPING_COST);
         } else {
             let updatedQuantity = tempCartList[productIdx].quantity + productQty;
-            updatedQuantity = updatedQuantity > stock ? stock : updatedQuantity;
+            if(updatedQuantity > stock) {
+                updatedQuantity = stock;
+            } else {
+                tempTotalCartItems += productQty;
+            }
 
             tempCartList[productIdx] = {
                 ...tempCartList[productIdx],
                 quantity: updatedQuantity,
             };
-
-            tempTotalCartItems += updatedQuantity;
         }
 
         return {
