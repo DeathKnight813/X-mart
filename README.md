@@ -1,5 +1,5 @@
 # X-Mart
-YouTube video: https://www.youtube.com/watch?v=hnSNJiHYwIQ&t=6s  
+YouTube video: https://youtu.be/hnSNJiHYwIQ
 
 Link: https://pravin-x-mart.netlify.app/   
 
