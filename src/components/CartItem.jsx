@@ -5,8 +5,19 @@ import { formatPrice } from '../utils/helpers';
 import styles from '../pages/Cart.module.css';
 import Button from './UI/Button';
 import { useCartContext } from '../store/cart-context';
+import { Link } from 'react-router-dom';
 
-const CartItem = ({ cartId, name, price: productPrice, company, stock, image, color, quantity }) => {
+const CartItem = ({
+    productId,
+    cartId,
+    name,
+    price: productPrice,
+    company,
+    stock,
+    image,
+    color,
+    quantity,
+}) => {
     const { updateCartItem, deleteCartItem } = useCartContext();
 
     const totalPrice = productPrice * quantity;
@@ -28,9 +39,11 @@ const CartItem = ({ cartId, name, price: productPrice, company, stock, image, co
                 <div className={styles.cart_item_img_cont}>
                     <img src={image} alt="" />
                 </div>
-                <h3 className={styles.cart_item_title}>
-                    {name} | {company}
-                </h3>
+                <Link to={`/products/${productId}`}>
+                    <h3 className={styles.cart_item_title}>
+                        {name} | {company}
+                    </h3>
+                </Link>
                 <p>{formattedProductPrice}</p>
                 <p className={styles.cart_item_color_cont}>
                     <span>Color:</span>
