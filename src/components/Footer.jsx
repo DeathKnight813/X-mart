@@ -1,4 +1,4 @@
-import footerLogo from '../assets/logo-2.png';
+import footerLogo from '../assets/logo-2-min.png';
 
 import { AiOutlineInstagram, AiOutlineYoutube, AiOutlineLinkedin, AiOutlineFacebook } from '../utils/index';
 
@@ -96,7 +96,7 @@ const Footer = () => {
                             <span>222 222 5555</span>
                             <span>123 Demo Eve</span>
                             <span>Mum, MH</span>
-                            <span className="cursor-not-allowed"> Google Maps →</span>
+                            <span className="cursor-not-allowed select-none"> Google Maps →</span>
                         </p>
                     </div>
                 </div>

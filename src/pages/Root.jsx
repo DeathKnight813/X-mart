@@ -1,7 +1,5 @@
-import { ScrollRestoration } from 'react-router-dom';
-
 import { m, LazyMotion, domAnimation, AnimatePresence } from 'framer-motion';
-import { useLocation, useOutlet } from 'react-router-dom';
+import { ScrollRestoration, useLocation, useOutlet } from 'react-router-dom';
 
 import MainNavbar from '../components/Navbar/MainNavbar';
 import Footer from '../components/Footer';

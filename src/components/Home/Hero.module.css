@@ -29,7 +29,7 @@
 
     background-color: gray;
 
-    background-image: url(../../assets/hero-image.png);
+    background-image: url(../../assets/hero-image-min.jpg);
     background-size: cover;
     background-position: center bottom 20%;
 }
@@ -82,7 +82,7 @@
     }
 
     .hero_img_cont {
-        background-image: url(../../assets/hero-image-mobile.png);
+        background-image: url(../../assets/hero-image-mobile-min.jpg);
     }
 
     .hero_title {

@@ -31,6 +31,7 @@ const CartItem = ({
             exit={{ height: 0, padding: 0, margin: 0, opacity: 0 }}
             transition={{
                 opacity: { duration: 0.5 },
+                // LEARN: trick...
                 default: { delay: 0.5 },
             }}
             layout

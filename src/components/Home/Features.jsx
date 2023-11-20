@@ -32,8 +32,9 @@ const Features = () => {
                             Lightning fast delivery
                         </h3>
                         <p>
-                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quidem eius dolorem
-                            asperiores accusamus aspernatur. Sequi ea ab consectetur voluptatum nam.
+                            Experience the thrill of swift, doorstep! Our lightning-fast shipping
+                            ensures that your dream furniture arrives in no time, bringing comfort
+                            to your home at the speed of your excitement.
                         </p>
                     </m.div>
                     <m.div
@@ -50,8 +51,9 @@ const Features = () => {
                             All forms of payment accepted
                         </h3>
                         <p>
-                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quidem eius dolorem
-                            asperiores accusamus aspernatur. Sequi ea ab consectetur voluptatum nam.
+                            Choose convenience with our flexible payment options. From credit cards
+                            to digital wallets, we accept them all, making your furniture purchase a
+                            stress-free experience.
                         </p>
                     </m.div>
                     <m.div
@@ -67,8 +69,9 @@ const Features = () => {
                             Guaranteed money back
                         </h3>
                         <p>
-                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quidem eius dolorem
-                            asperiores accusamus aspernatur. Sequi ea ab consectetur voluptatum nam.
+                            Your satisfaction is our priority. Rest easy with our money-back
+                            guarantee. If your furniture doesn't meet your expectations, we've got
+                            you covered. Shop confidently.
                         </p>
                     </m.div>
                 </div>

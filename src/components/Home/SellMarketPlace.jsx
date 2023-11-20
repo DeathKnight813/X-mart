@@ -1,7 +1,7 @@
 import { m, useScroll, useTransform } from 'framer-motion';
 import { useRef } from 'react';
 
-import sellImage from '../../assets/sell-image.png';
+import sellImage from '../../assets/sell-image-min.jpg';
 
 import Button from '../UI/Button';
 

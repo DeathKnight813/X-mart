@@ -71,11 +71,15 @@ export const routes = [
             </React.Suspense>
         ),
     },
-    { path: '/products/:productId', name: 'Product Details', element: (
-        <React.Suspense fallback={Fallback}>
-            <ProductDetailsPage />
-        </React.Suspense>
-    ), },
+    {
+        path: '/products/:productId',
+        name: 'Product Details',
+        element: (
+            <React.Suspense fallback={Fallback}>
+                <ProductDetailsPage />
+            </React.Suspense>
+        ),
+    },
 ];
 
 export const navLinks = [
