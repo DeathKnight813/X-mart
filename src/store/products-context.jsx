@@ -7,6 +7,7 @@ import {
     SINGLE_PRODUCT_LOADING,
     SINGLE_PRODUCT_ERROR,
     GET_SINGLE_PRODUCT,
+    dummyProductsList,
 } from '../utils/constants';
 
 import productsReducer from './reducers/productsReducer';
@@ -27,13 +28,21 @@ const ProductsProvider = function ({ children }) {
     const [state, dispatch] = useReducer(productsReducer, initialState);
 
     const fetchData = async url => {
-        const response = await fetch(url);
+        /* const response = await fetch(url);
         if (!response.ok) {
             throw new Error(`Error when fetching products data, ${response.status}`);
         }
 
         const data = await response.json();
-        return data;
+        return data; */
+
+        console.log(url);
+
+        if (url.includes('react-store-products')) {
+            return dummyProductsList;
+        } else if (url.includes('react-store-single-product')) {
+            return {};
+        }
     };
 
     useEffect(() => {
@@ -57,7 +66,10 @@ const ProductsProvider = function ({ children }) {
             dispatch({ type: GET_SINGLE_PRODUCT, payload: data });
         } catch (e) {
             console.log(e);
-            dispatch({ type: SINGLE_PRODUCT_ERROR, payload: "Couldn't fetch the product's details" });
+            dispatch({
+                type: SINGLE_PRODUCT_ERROR,
+                payload: "Couldn't fetch the product's details",
+            });
         }
     };
 

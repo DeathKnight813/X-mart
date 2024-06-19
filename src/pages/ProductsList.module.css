@@ -120,7 +120,8 @@
 .product_title {
     font-family: var(--ff-secondary);
     font-size: 1.8rem;
-    margin-bottom: .2rem;
+    /* margin-bottom: .2rem; */
+    margin-bottom: 0rem;
 }
 
 .product_company {

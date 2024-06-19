@@ -12,7 +12,10 @@ import {
 
 const filterReducer = (state, action) => {
     if (action.type === LOAD_PRODUCTS) {
-        const maxPrice = action.payload.reduce((acc, curr) => (acc < curr.price ? curr.price : acc), 0);
+        const maxPrice = action.payload.reduce(
+            (acc, curr) => (acc < curr.price ? curr.price : acc),
+            0
+        );
 
         return {
             ...state,
@@ -73,17 +76,22 @@ const filterReducer = (state, action) => {
 
         tempFilteredProductsList = tempFilteredProductsList.filter(
             productData =>
-                productData.colors.includes(state.filters['color']) || state.filters['color'] === 'all'
+                productData.colors.includes(state.filters['color']) ||
+                state.filters['color'] === 'all'
         );
 
         tempFilteredProductsList = tempFilteredProductsList.filter(
             productData =>
-                productData.name.includes(state.filters['searchTerm']) || state.filters['searchTerm'] === ''
+                productData.name
+                    .toLowerCase()
+                    .includes(state.filters['searchTerm'].toLowerCase()) ||
+                state.filters['searchTerm'] === ''
         );
 
         tempFilteredProductsList = tempFilteredProductsList.filter(
             productData =>
-                productData.category === state.filters['category'] || state.filters['category'] === 'all'
+                productData.category === state.filters['category'] ||
+                state.filters['category'] === 'all'
         );
 
         tempFilteredProductsList = tempFilteredProductsList.filter(
@@ -92,7 +100,8 @@ const filterReducer = (state, action) => {
 
         tempFilteredProductsList = tempFilteredProductsList.filter(
             productData =>
-                productData.shipping === state.filters['freeDelivery'] || !state.filters['freeDelivery']
+                productData.shipping === state.filters['freeDelivery'] ||
+                !state.filters['freeDelivery']
         );
 
         return {
@@ -105,7 +114,11 @@ const filterReducer = (state, action) => {
         return {
             ...state,
             filteredProductsList: state.allProductsList,
-            filters: { ...action.payload, max: state.filters.max, currFilterPrice: state.filters.max },
+            filters: {
+                ...action.payload,
+                max: state.filters.max,
+                currFilterPrice: state.filters.max,
+            },
         };
     }
 

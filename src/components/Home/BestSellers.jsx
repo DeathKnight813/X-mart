@@ -36,11 +36,11 @@ const BestSellers = () => {
                                         className={styles.best_seller_cont}
                                         style={{ backgroundImage: `url(${data.image})` }}
                                     >
-                                        <Link to={`products/${data.id}`}>
+                                        {/* <Link to={`products/${data.id}`}>
                                             <Button classes={`${styles.scrolling_slider_btn} py-1`}>
                                                 Details
                                             </Button>
-                                        </Link>
+                                        </Link> */}
                                     </div>
                                 ))}
                             </m.div>
@@ -58,11 +58,11 @@ const BestSellers = () => {
                                         className={styles.best_seller_cont}
                                         style={{ backgroundImage: `url(${data.image})` }}
                                     >
-                                        <Link to={`products/${data.id}`}>
+                                        {/* <Link to={`products/${data.id}`}>
                                             <Button classes={`${styles.scrolling_slider_btn} py-1`}>
                                                 Details
                                             </Button>
-                                        </Link>
+                                        </Link> */}
                                     </div>
                                 ))}
                             </m.div>
