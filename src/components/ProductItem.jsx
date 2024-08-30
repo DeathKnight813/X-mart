@@ -9,7 +9,7 @@ const ProductItem = ({ id, name, description, price, category, company, image })
     const formattedPrice = formatPrice(price);
 
     description =
-        'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam incidunt dolore molestias molestiae doloribus aliquid perspiciatis error illo. Explicabo, sunt.';
+        'The company itself is a very successful company. The same thing happens with pain, trouble, trouble, trouble. I will explain, they are.';
 
     return (
         <m.li className={styles.product_container} layout transition={{ duration: 0.7 }}>

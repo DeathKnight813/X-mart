@@ -86,10 +86,8 @@ const ProductDetailsPage = () => {
                     </p>
                 </div>
                 <p className={styles.product_description}>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Et error sunt sapiente aut
-                    laborum, quibusdam, esse ullam cumque quis incidunt recusandae perspiciatis molestias sit
-                    dicta, optio natus! Quisquam, error nulla nobis sunt dolorem laudantium aut, nemo nisi
-                    animi totam qui?
+                The company itself is a very successful company. And they are a mistake of the wise or of the labors, for some, that there is no matter who happens to refuse to see the troubles, it is said, the option was born! Anyone, there is no mistake for us who praise the pain or, no one but the whole soul who?
+
                 </p>
                 <div className={styles.icons_container}>
                     <div className={styles.icon_cont}>

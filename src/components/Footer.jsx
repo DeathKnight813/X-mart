@@ -15,13 +15,13 @@ const Footer = () => {
                     </div>
                     <ul className={styles.social_links_container}>
                         <li className={`gradient_border ${styles.social_link_cont}`}>
-                            <Link to="https://www.instagram.com/being_exception_/" target="_blank">
+                            <Link to="" target="_blank">
                                 <AiOutlineInstagram />
                             </Link>
                         </li>
                         <li className={`gradient_border ${styles.social_link_cont}`}>
                             <Link
-                                to="https://www.youtube.com/channel/UCz7gPFmInQ9oOpL_wW0s8rw"
+                                to=""
                                 target="_blank"
                             >
                                 <AiOutlineYoutube />
@@ -29,7 +29,7 @@ const Footer = () => {
                         </li>
                         <li className={`gradient_border ${styles.social_link_cont}`}>
                             <Link
-                                to="https://www.linkedin.com/in/pravin-mudaliyar-022498224/"
+                                to="https://www.linkedin.com/in/arseni-lulian/"
                                 target="_blank"
                             >
                                 <AiOutlineLinkedin />
