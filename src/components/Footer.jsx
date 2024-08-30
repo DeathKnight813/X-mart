@@ -90,7 +90,7 @@ const Footer = () => {
                             </li>
                         </ul>
                     </div>
-                    <div className={styles.address_container}>
+                    {/* <div className={styles.address_container}>
                         <h4 className={styles.address_title}>Address</h4>
                         <p className={styles.address_content}>
                             <span>222 222 5555</span>
@@ -98,7 +98,7 @@ const Footer = () => {
                             <span>Mum, MH</span>
                             <span className="cursor-not-allowed select-none"> Google Maps →</span>
                         </p>
-                    </div>
+                    </div> */}
                 </div>
                 <div className={`${styles.footer} ${styles.footer_last_cont}`}>
                     {/* <p className={styles.footer_copyright}>© X-MART 2019 - {new Date().getFullYear()}</p> */}
